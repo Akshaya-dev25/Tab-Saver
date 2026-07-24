@@ -1,0 +1,25 @@
+body{
+    font-family:Arial,sans-serif;
+    width:250px;
+    padding:10px;
+}
+h2{
+    text-align:center;
+}
+button{
+    width:100%;
+    padding: 8px;
+    margin-bottom:10px;
+    background:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+button:hover{
+    background:#45a049;
+}
+li{
+    font-size:12px;
+    margin-bottom:5px;
+}

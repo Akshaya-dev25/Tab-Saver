@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Tab Saver",
+    "description":"Save and restore your browser tabs.",
+    "version":"1.0",
+    "permissions":["tabs","storage"],
+    "action":{
+        "default_popup":"popup.html"
+    }
+}
