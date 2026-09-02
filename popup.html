@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tab Saver</title>
-    <link rel=""stylesheet" href="popup.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <h2>Tab Saver</h2>
-    <button id="saveTabs">Save Tabs</button>
-    <button id="openTabs"> Open Saved Tabs </button>
-    <ul id="tabsList"></ul>
-    </ul>
+    <main class="popup">
+        <header class="popup-header">
+            <p class="eyebrow">Your browser, organized</p>
+            <h1>Tab Saver</h1>
+            <p class="subtitle">Keep the tabs you want to return to.</p>
+        </header>
+
+        <section class="actions" aria-label="Tab actions">
+            <button id="saveTabs" class="button button-primary">Save current tabs</button>
+            <button id="openTabs" class="button button-secondary">Open saved tabs</button>
+        </section>
+
+        <section class="saved-tabs" aria-labelledby="saved-tabs-title">
+            <div class="section-heading">
+                <h2 id="saved-tabs-title">Saved tabs</h2>
+                <span class="section-dot" aria-hidden="true"></span>
+            </div>
+            <ul id="tabsList"></ul>
+        </section>
+    </main>
     <script src="popup.js"></script>
 </body>
 </html>
