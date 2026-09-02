@@ -1,6 +1,7 @@
 const saveButton=document.getElementById("saveTabs");
 const tabList=document.getElementById("tabsList");
 const emptyState=document.getElementById("emptyState");
+const tabsCount=document.getElementById("tabsCount");
 saveButton.addEventListener("click",()=> {
     chrome.tabs.query({},function(tabs){
         let tabUrls=tabs.map(tab=>tab.url);
@@ -12,6 +13,7 @@ function displayTabs(tabs){
     tabs=Array.isArray(tabs) ? tabs : [];
     tabList.innerHTML="";
     emptyState.hidden=tabs.length > 0;
+    tabsCount.textContent=`Saved Tabs: ${tabs.length}`;
     tabs.forEach(url =>{
         let li=document.createElement("li");
         let link=document.createElement("a");
