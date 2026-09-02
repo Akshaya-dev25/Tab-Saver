@@ -149,6 +149,9 @@ h1 {
 
 #tabsList li {
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 6px;
     padding: 9px 11px;
     border: 1px solid #dce7df;
@@ -162,6 +165,8 @@ h1 {
 }
 
 #tabsList a {
+    min-width: 0;
+    flex: 1;
     display: block;
     overflow: hidden;
     color: #347054;
@@ -175,4 +180,27 @@ h1 {
 #tabsList a:hover {
     color: #1f503c;
     text-decoration: underline;
+}
+
+.remove-tab {
+    flex: 0 0 auto;
+    padding: 3px 5px;
+    border: 0;
+    border-radius: 5px;
+    color: #a05b52;
+    background: transparent;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.remove-tab:hover {
+    color: #843f37;
+    background: #f9ece9;
+}
+
+.remove-tab:focus-visible {
+    outline: 2px solid rgba(160, 91, 82, 0.35);
+    outline-offset: 1px;
 }
