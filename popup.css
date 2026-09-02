@@ -126,14 +126,14 @@ h1 {
     list-style: none;
 }
 
-#tabsList:empty::before {
-    display: block;
+.empty-state {
+    margin: 0 0 8px;
     padding: 14px 12px;
     border: 1px dashed #c9d8ce;
     border-radius: 8px;
     color: #82918a;
-    content: "No saved tabs yet";
     font-size: 12px;
+    line-height: 1.4;
     text-align: center;
 }
 

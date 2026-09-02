@@ -1,5 +1,6 @@
 const saveButton=document.getElementById("saveTabs");
 const tabList=document.getElementById("tabsList");
+const emptyState=document.getElementById("emptyState");
 saveButton.addEventListener("click",()=> {
     chrome.tabs.query({},function(tabs){
         let tabUrls=tabs.map(tab=>tab.url);
@@ -8,7 +9,9 @@ saveButton.addEventListener("click",()=> {
     })
 })
 function displayTabs(tabs){
+    tabs=Array.isArray(tabs) ? tabs : [];
     tabList.innerHTML="";
+    emptyState.hidden=tabs.length > 0;
     tabs.forEach(url =>{
         let li=document.createElement("li");
         let link=document.createElement("a");
@@ -20,7 +23,5 @@ function displayTabs(tabs){
     });
 }
 chrome.storage.local.get("savedTabs",function(data){
-    if(data.savedTabs){
-        displayTabs(data.savedTabs);
-    }
+    displayTabs(data.savedTabs);
 });
